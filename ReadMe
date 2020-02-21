@@ -1,0 +1,3 @@
+Compile code with "make"
+Run code with "make run"
+Data stored in this directory under the name "studentDB.dat"

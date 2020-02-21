@@ -1,5 +1,20 @@
+.RECIPEPREFIX +=
+CC = g++
+CFLAGS = -lm -lrt
+
+PROG = bin/*
+OBJS = obj/*
+
 default:
-	g++ src/StudentDatabase.cpp -o bin/StudentDatabase
-	
+    mkdir -p bin obj
+    $(CC) $(CFLAGS) -c src/StudentDatabase.cpp -o obj/StudentDatabase
+    $(CC) $(CFLAGS) -c src/StudentRecord.cpp -o obj/StudentRecord
+    $(CC) $(CFLAGS) obj/StudentDatabase obj/StudentRecord -o bin/StudentDB
+
 run:
-	bin/StudentDatabase
+    bin/StudentDB
+
+clean:
+    rm $(PROG) $(OBJS)
+
+
