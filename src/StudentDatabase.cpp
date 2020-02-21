@@ -14,7 +14,8 @@ int main()
 		{
 			case 'q' : return 0;
 				break;
-			
+			case '0' : 
+				break;
 			
 			default: cout<<"Looping"<<endl;
 		}
@@ -23,3 +24,5 @@ int main()
 	
 	return 0;
 }
+
+
